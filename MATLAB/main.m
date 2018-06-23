@@ -27,12 +27,9 @@ fprintf("UDP Port is %s. \nWaiting for initialization request from Unity. \n", p
 
 running = true;
 while running
-    tic
     msg = double(readMessage(port));
     messageHeader = msg(1);
-%     if (msg ~= -1)
-%         disp(msg)
-%     end
+    
     switch messageHeader
         case INITIALIZE_CMD 
             disp("Initializing...");
@@ -97,7 +94,6 @@ while running
                 % Send control back to unity
                 controlMsg = [CONTROL_CMD uRight' uLeft'];
                 sendMessage(controlMsg, port);
-                toc
             end
             
         case END_CMD
