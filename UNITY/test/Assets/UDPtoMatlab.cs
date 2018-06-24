@@ -161,8 +161,8 @@ public class UDPtoMatlab : MonoBehaviour
 						commandVelRight.y = msg [2];
 						commandVelLeft.x = msg [3];
 						commandVelLeft.y = msg [4];
-						//Debug.Log (stopWatch.Elapsed.TotalSeconds - startTime);
-						//Debug.Log ("Recieved control packet.");
+						Debug.Log (stopWatch.Elapsed.TotalSeconds - startTime);
+						Debug.Log ("Recieved control packet.");
 						break;
 					default:
 						Debug.Log ("Unexpected message header");
