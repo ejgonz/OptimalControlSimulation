@@ -83,7 +83,7 @@ while running
                    handHistoryRight(:,i) = [msg(7 + 2*(i-1+numPrevPoints)); msg(8 + 2*(i-1+numPrevPoints))];
                 end
                 
-                % Clear input buffer
+                % Clear input buffer 
                 % flushinput(port);
                 
                 uRight = [0;0]; uLeft = [0;0];
